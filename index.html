@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <link rel="stylesheet" href="CSS/bootstrap.min.css">
+  <link rel="stylesheet" href="CSS/bootstrap.min.css.map">
+  <link rel="stylesheet" href="CSS/style.css">
+  <title>Contablito-MER</title>
+</head>
+
+<body>
+  <div class="container">
+
+      <h1 class="my-3">Contablito-MER</h1>
+      <hr class="my-4">
+
+      <div class="row">
+        <div class="col">
+
+          <h2 class="my-3">Registro de Mercancia</h2>
+          <hr class="my-4">
+
+          <div class="form-check form-check-inline">
+            <input class="form-check-input tipo" type="radio" name="CompraVenta" id="compra" value="compra">
+            <label class="form-check-label" for="compra">Compra</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input tipo" type="radio" name="CompraVenta" id="venta" value="venta" disabled>
+            <label class="form-check-label" for="venta">Venta</label>
+          </div>
+
+          <br>
+
+          <label for="Fecha" class="form-label">Fecha</label>
+          <input type="text" class="form-control control update" id="Fecha">
+
+          <label for="codigo" class="form-label">Código</label>
+          <input type="text" class="form-control update" id="codigo">
+
+          <label for="Producto" class="form-label">Producto</label>
+          <input type="text" class="form-control update" id="Producto">
+          
+          <label for="Descripcion" class="form-label">Descripcion</label>
+          <input type="text" class="form-control update" id="Descripcion">
+
+          <label for="Inventario" class="form-label">Inventario</label>
+          <input type="number" class="form-control update" id="Inventario">
+
+          <label for="CostoU" class="form-label">Costo Por Unidad</label>
+          <input type="number" class="form-control update" id="CostoU">
+
+          <label for="IVA" class="form-label">IVA</label>
+          <select class="form-select update" aria-label="Default select example">
+            <option selected>IVA</option>
+            <option value="0">0%</option>
+            <option value="10">10%</option>
+            <option value="22">22%</option>
+          </select>
+
+          <div class="d-grid">
+            <button type="button" class="btn btn-primary my-3" id="actualizar" onclick="Actualizar()">Actualizar</button>
+          </div>
+        </div><!-- Este es el registo -->
+
+        <div class="col">
+            <h5>Lista de Pendientes</h5>
+            <div class="border rounded-3 cont">
+              <ul class="list-group" id="Cuidado">
+              </ul>
+            </div>
+        </div> <!-- Este es el de la lista de pendientes -->
+      </div> <!-- Este es el de la fila -->
+      
+      <div class="row">
+        <div class="col-12">
+
+          <table >
+              <thead>
+              <tr>
+              <th>Código</th>
+              <th>Producto</th>    
+              <th>Descripción</th>
+              <th>Inventario</th>
+              <th>Costo</th>
+              </tr>
+              </thead>
+
+              <tbody class="col-sm-8" id="Actual">
+
+              </tbody>
+          </table>
+
+          <hr>
+
+          <table >
+              <thead>
+              <tr>
+              <th>Tipo</th>
+              <th>Fecha</th>
+              <th>Código</th>    
+              <th>Cantidad</th>
+              <th>Coste por Unidad</th>
+              <th>Subtotal</th>
+              <th>IVA</th>
+              <th>Total</th>
+              </tr>
+              </thead>
+
+              <tbody class="col-sm-8" id="Nuevo">
+
+              </tbody>
+          </table>
+    </div> <!-- Este es el de las tablas -->
+      </div> <!-- Este es el de la segunda fila -->
+  </div> <!-- Este es el del container -->
+  <script src="script.js"></script>
+</body>
+
+</html>
