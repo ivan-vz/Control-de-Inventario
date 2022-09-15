@@ -43,7 +43,7 @@ function tableroTransacciones(){
 
 function cuidado(producto){
     let notas = document.getElementById("Cuidado");
-    let nota = `<li class="list-group-item">Comprar ${producto.nombre} - Actualmente hay: ${producto.inventario}</li>`;
+    let nota = `<li class="list-group-item list-group-item-warning">Comprar ${producto.nombre} - Actualmente hay: ${producto.inventario}</li>`;
     notas.innerHTML += nota;
 }
 
@@ -115,7 +115,7 @@ function Actualizar(){
                 n = n - 1;
 
             } else {//EL nuevo item no ha sido agregado a la lista
-                if(newproduct.tipo === "Comprar"){
+                if(newproduct.tipo === "Compra"){
                     registroInv.push(newproduct);
                     registroTrans.push(newproduct);
                 } else {
